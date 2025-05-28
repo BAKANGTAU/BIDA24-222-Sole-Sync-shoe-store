@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - SoleSync Premium Footwear</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container mx-auto flex justify-between items-center py-4 px-6">
+            <div class="logo text-2xl font-bold">
+                <a href="index.html"><span class="text-orange-500">Sole</span><span>Sync</span></a>
+            </div>
+            <div class="nav-links hidden md:flex space-x-8">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="shop.html" class="nav-link">Shop</a>
+                <a href="about.html" class="nav-link active">About</a>
+                <a href="contact.html" class="nav-link">Contact</a>
+                <a href="faq.html" class="nav-link">FAQ</a>
+            </div>
+            <div class="nav-icons flex space-x-4">
+                <a href="#" class="nav-icon"><i class="fas fa-search"></i></a>
+                <a href="#" class="nav-icon"><i class="fas fa-user"></i></a>
+                <a href="#" class="nav-icon relative">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span class="cart-count absolute -top-2 -right-2 bg-orange-500 text-white text-xs rounded-full w-5 h-5 flex items-center justify-center">0</span>
+                </a>
+                <button class="md:hidden nav-icon" id="mobile-menu-button">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+        <!-- Mobile Menu -->
+        <div class="mobile-menu hidden md:hidden bg-white py-4 px-6 shadow-lg" id="mobile-menu">
+            <a href="index.html" class="block py-2">Home</a>
+            <a href="shop.html" class="block py-2">Shop</a>
+            <a href="about.html" class="block py-2">About</a>
+            <a href="contact.html" class="block py-2">Contact</a>
+            <a href="faq.html" class="block py-2">FAQ</a>
+        </div>
+    </nav>
+
+    <!-- About Header -->
+    <section class="about-header bg-gray-100 py-12">
+        <div class="container mx-auto px-6 text-center">
+            <h1 class="text-4xl font-bold mb-4">Our Story</h1>
+            <p class="text-lg max-w-2xl mx-auto">Discover the passion and dedication behind SoleSync's premium footwear.</p>
+        </div>
+    </section>
+
+    <!-- About Content -->
+    <section class="about-content py-12">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col md:flex-row items-center mb-16">
+                <div class="md:w-1/2 mb-8 md:mb-0">
+                    <img src="https://images.unsplash.com/photo-1600185365483-26d7a4cc7519?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" alt="Our Beginnings" class="rounded-lg shadow-lg max-w-full h-auto">
+                </div>
+                <div class="md:w-1/2 md:pl-12">
+                    <h2 class="text-3xl font-bold mb-6">Our Beginnings</h2>
+                    <p class="mb-4">Founded in 2010 by footwear enthusiast Michael Johnson, SoleSync started as a small boutique shoe store in downtown Seattle with a simple mission: to provide high-quality, comfortable shoes that don't compromise on style.</p>
+                    <p class="mb-6">What began as a passion project quickly grew into a beloved local destination as word spread about our carefully curated selection and exceptional customer service.</p>
+                    <button class="btn-secondary">Meet Our Team</button>
+                </div>
+            </div>
+            
+            <div class="flex flex-col md:flex-row items-center mb-16">
+                <div class="md:w-1/2 mb-8 md:mb-0 md:order-2">
+                    <img src="https://images.unsplash.com/photo-1520333789090-1afc82db536a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" alt="Our Growth" class="rounded-lg shadow-lg max-w-full h-auto">
+                </div>
+                <div class="md:w-1/2 md:pr-12 md:order-1">
+                    <h2 class="text-3xl font-bold mb-6">Our Growth</h2>
+                    <p class="mb-4">In 2015, we expanded to our online store, allowing us to share our passion for quality footwear with customers across the country. Today, we ship to all 50 states and have a growing international presence.</p>
+                    <p class="mb-6">Despite our growth, we've maintained our commitment to the values that made us successful: quality craftsmanship, ethical sourcing, and personalized service.</p>
+                    <button class="btn-secondary">Our Retail Locations</button>
+                </div>
+            </div>
+            
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 mb-8 md:mb-0">
+                    <img src="https://images.unsplash.com/photo-1521791055366-0d553872125f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" alt="Our Philosophy" class="rounded-lg shadow-lg max-w-full h-auto">
+                </div>
+                <div class="md:w-1/2 md:pl-12">
+                    <h2 class="text-3xl font-bold mb-6">Our Philosophy</h2>
+                    <p class="mb-4">At SoleSync, we believe that great shoes should combine three essential qualities: comfort, durability, and style. We carefully test every pair we sell to ensure they meet our high standards.</p>
+                    <p class="mb-6">We're committed to sustainability and ethical manufacturing practices. Many of our brands use recycled materials and eco-friendly production methods.</p>
+                    <button class="btn-secondary">Sustainability Initiatives</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Section -->
+    <section class="team py-12 bg-gray-100">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center mb-12">Meet Our Team</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="team-member bg-white p-6 rounded-lg shadow-md text-center">
+                    <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Michael Johnson" class="w-32 h-32 rounded-full mx-auto mb-4">
+                    <h3 class="text-xl font-bold mb-2">Michael Johnson</h3>
+                    <p class="text-orange-500 mb-3">Founder & CEO</p>
+                    <p class="text-gray-700">Footwear enthusiast with over 20 years in the industry.</p>
+                </div>
+                <div class="team-member bg-white p-6 rounded-lg shadow-md text-center">
+                    <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Sarah Chen" class="w-32 h-32 rounded-full mx-auto mb-4">
+                    <h3 class="text-xl font-bold mb-2">Sarah Chen</h3>
+                    <p class="text-orange-500 mb-3">Head of Product</p>
+                    <p class="text-gray-700">Ensures every shoe meets our quality standards.</p>
+                </div>
+                <div class="team-member bg-white p-6 rounded-lg shadow-md text-center">
+                    <img src="https://randomuser.me/api/portraits/men/75.jpg" alt="David Martinez" class="w-32 h-32 rounded-full mx-auto mb-4">
+                    <h3 class="text-xl font-bold mb-2">David Martinez</h3>
+                    <p class="text-orange-500 mb-3">Customer Experience</p>
+                    <p class="text-gray-700">Dedicated to making every interaction exceptional.</p>
+                </div>
+                <div class="team-member bg-white p-6 rounded-lg shadow-md text-center">
+                    <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="Emily Wilson" class="w-32 h-32 rounded-full mx-auto mb-4">
+                    <h3 class="text-xl font-bold mb-2">Emily Wilson</h3>
+                    <p class="text-orange-500 mb-3">Marketing Director</p>
+                    <p class="text-gray-700">Shares our passion with the world.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter -->
+    <section class="newsletter py-12 bg-orange-500 text-white">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="text-3xl font-bold mb-4">Stay Updated</h2>
+            <p class="mb-8 max-w-2xl mx-auto">Subscribe to our newsletter for exclusive offers, new arrivals, and style tips.</p>
+            <form class="newsletter-form max-w-md mx-auto flex">
+                <input type="email" placeholder="Your email address" class="flex-grow px-4 py-2 rounded-l focus:outline-none text-gray-800">
+                <button type="submit" class="btn-newsletter">Subscribe</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer bg-gray-900 text-white py-8">
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div class="footer-col">
+                    <h3 class="text-xl font-bold mb-4">SoleSync</h3>
+                    <p>Your premier destination for quality footwear since 2010.</p>
+                </div>
+                <div class="footer-col">
+                    <h4 class="text-lg font-semibold mb-4">Quick Links</h4>
+                    <ul>
+                        <li class="mb-2"><a href="index.html" class="footer-link">Home</a></li>
+                        <li class="mb-2"><a href="shop.html" class="footer-link">Shop</a></li>
+                        <li class="mb-2"><a href="about.html" class="footer-link">About</a></li>
+                        <li><a href="contact.html" class="footer-link">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4 class="text-lg font-semibold mb-4">Customer Service</h4>
+                    <ul>
+                        <li class="mb-2"><a href="faq.html" class="footer-link">FAQs</a></li>
+                        <li class="mb-2"><a href="#" class="footer-link">Shipping Policy</a></li>
+                        <li class="mb-2"><a href="#" class="footer-link">Returns & Exchanges</a></li>
+                        <li><a href="#" class="footer-link">Size Guide</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4 class="text-lg font-semibold mb-4">Connect With Us</h4>
+                    <div class="social-icons flex space-x-4">
+                        <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-pinterest-p"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 mt-8 pt-6 text-center">
+                <p>&copy; 2023 SoleSync. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

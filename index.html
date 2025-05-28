@@ -1,0 +1,478 @@
+<!DOCTYPE html> 
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SoleSync - Premium Footwear</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container mx-auto flex justify-between items-center py-4 px-6">
+            <div class="logo text-2xl font-bold">
+                <a href="index.html"><span class="text-orange-500">Sole</span><span>Sync</span></a>
+            </div>
+            <div class="nav-links hidden md:flex space-x-8">
+                <a href="index.html" class="nav-link active">Home</a>
+                <a href="shop.html" class="nav-link">Shop</a>
+                <a href="about.html" class="nav-link">About</a>
+                <a href="contact.html" class="nav-link">Contact</a>
+                <a href="faq.html" class="nav-link">FAQ</a>
+            </div>
+            <div class="nav-icons flex space-x-4">
+                <a href="#" class="nav-icon"><i class="fas fa-search"></i></a>
+                <a href="#" class="nav-icon"><i class="fas fa-user"></i></a>
+                <a href="#" class="nav-icon relative">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span class="cart-count absolute -top-2 -right-2 bg-orange-500 text-white text-xs rounded-full w-5 h-5 flex items-center justify-center">0</span>
+                </a>
+                <button class="md:hidden nav-icon" id="mobile-menu-button">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+        <!-- Mobile Menu -->
+        <div class="mobile-menu hidden md:hidden bg-white py-4 px-6 shadow-lg" id="mobile-menu">
+            <a href="index.html" class="block py-2">Home</a>
+            <a href="shop.html" class="block py-2">Shop</a>
+            <a href="about.html" class="block py-2">About</a>
+            <a href="contact.html" class="block py-2">Contact</a>
+            <a href="faq.html" class="block py-2">FAQ</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero bg-gray-100 py-16">
+        <div class="container mx-auto px-6 flex flex-col md:flex-row items-center">
+            <div class="hero-text md:w-1/2 mb-8 md:mb-0">
+                <h1 class="text-4xl md:text-5xl font-bold mb-4">Step Up Your <span class="text-orange-500">Style</span></h1>
+                <p class="text-lg mb-6">Discover the latest trends in footwear with our premium collection of sneakers, boots, and more.</p>
+                <a href="shop.html" class="btn-primary inline-block">Shop Now</a>
+            </div>
+            <div class="hero-image md:w-1/2 flex justify-center">
+                <img src="images/ChatGPT Image Apr 22, 2025, 02_09_17 AM.png" class="rounded-lg shadow-xl max-w-full h-auto">
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Categories -->
+    <section class="categories py-12 bg-white">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center mb-12">Shop by Category</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="category-card">
+                    <div class="category-image">
+                        <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" alt="Sneakers">
+                    </div>
+                    <h3 class="category-title">Sneakers</h3>
+                </div>
+                <div class="category-card">
+                    <div class="category-image">
+                        <img src="images/usama-akram-kP6knT7tjn4-unsplash (1).jpg" alt="Running Shoes">
+                    </div>
+                    <h3 class="category-title">Running</h3>
+                </div>
+                <div class="category-card">
+                    <div class="category-image">
+                        <img src="https://images.unsplash.com/photo-1525966222134-fcfa99b8ae77?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" alt="Casual Shoes">
+                    </div>
+                    <h3 class="category-title">Casual</h3>
+                </div>
+                <div class="category-card">
+                    <div class="category-image">
+                        <img src="images/mostafa-mahmoudi-3OZr-hLbsq0-unsplash (1).jpg" alt="Boots">
+                    </div>
+                    <h3 class="category-title">Boots</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section class="products py-12 bg-gray-100" id="products">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center mb-12">Featured Products</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8" id="products-container">
+                <!-- Product cards will be inserted here by JavaScript -->
+            </div>
+            <div class="text-center mt-12">
+                <a href="shop.html" class="btn-secondary inline-block">View All Products</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about py-12 bg-white" id="about">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 mb-8 md:mb-0">
+                    <img src="https://images.unsplash.com/photo-1600185365483-26d7a4cc7519?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" alt="About Us" class="rounded-lg shadow-lg max-w-full h-auto">
+                </div>
+                <div class="md:w-1/2 md:pl-12">
+                    <h2 class="text-3xl font-bold mb-6">Our Story</h2>
+                    <p class="mb-4">Founded in 2010, SoleSync started as a small boutique shoe store with a passion for quality footwear. Today, we've grown into a premier online destination for shoe enthusiasts worldwide.</p>
+                    <p class="mb-6">We carefully curate our collection to bring you the most comfortable, stylish, and durable footwear from top brands and emerging designers.</p>
+                    <a href="about.html" class="btn-secondary inline-block">Learn More</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="testimonials py-12 bg-gray-100">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center mb-12">What Our Customers Say</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="testimonial-card">
+                    <div class="testimonial-text">
+                        <p>"The quality of these shoes is amazing! I've been wearing them for months and they still look brand new."</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-name">Sarah Johnson</div>
+                        <div class="author-title">Fashion Blogger</div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-text">
+                        <p>"Great customer service and fast shipping. The shoes fit perfectly and are super comfortable."</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-name">Michael Chen</div>
+                        <div class="author-title">Athlete</div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-text">
+                        <p>"I love the variety of styles available. Found the perfect pair for my wedding!"</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-name">David Martinez</div>
+                        <div class="author-title">Photographer</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter -->
+    <section class="newsletter py-12 bg-orange-500 text-white">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="text-3xl font-bold mb-4">Stay Updated</h2>
+            <p class="mb-8 max-w-2xl mx-auto">Subscribe to our newsletter for exclusive offers, new arrivals, and style tips.</p>
+            <form class="newsletter-form max-w-md mx-auto flex">
+                <input type="email" placeholder="Your email address" class="flex-grow px-4 py-2 rounded-l focus:outline-none text-gray-800">
+                <button type="submit" class="btn-newsletter">Subscribe</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact py-12 bg-white" id="contact">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center mb-12">Contact Us</h2>
+            <div class="flex flex-col md:flex-row">
+                <div class="md:w-1/2 mb-8 md:mb-0">
+                    <form class="contact-form">
+                        <div class="mb-4">
+                            <label for="name" class="block mb-2">Name</label>
+                            <input type="text" id="name" class="w-full px-4 py-2 border rounded focus:outline-none focus:ring-2 focus:ring-orange-500">
+                        </div>
+                        <div class="mb-4">
+                            <label for="email" class="block mb-2">Email</label>
+                            <input type="email" id="email" class="w-full px-4 py-2 border rounded focus:outline-none focus:ring-2 focus:ring-orange-500">
+                        </div>
+                        <div class="mb-4">
+                            <label for="message" class="block mb-2">Message</label>
+                            <textarea id="message" rows="4" class="w-full px-4 py-2 border rounded focus:outline-none focus:ring-2 focus:ring-orange-500"></textarea>
+                        </div>
+                        <button type="submit" class="btn-primary">Send Message</button>
+                    </form>
+                </div>
+                <div class="md:w-1/2 md:pl-12">
+                    <h3 class="text-xl font-bold mb-4">Our Info</h3>
+                    <div class="contact-info mb-6">
+                        <div class="flex items-center mb-3">
+                            <i class="fas fa-map-marker-alt mr-3 text-orange-500"></i>
+                            <span>123 Shoe Street, Footwear City, FC 12345</span>
+                        </div>
+                        <div class="flex items-center mb-3">
+                            <i class="fas fa-phone mr-3 text-orange-500"></i>
+                            <span>(123) 456-7890</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-envelope mr-3 text-orange-500"></i>
+                            <span>info@solesync.com</span>
+                        </div>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4">Store Hours</h3>
+                    <div class="store-hours">
+                        <div class="flex justify-between mb-2">
+                            <span>Monday - Friday</span>
+                            <span>9:00 AM - 7:00 PM</span>
+                        </div>
+                        <div class="flex justify-between mb-2">
+                            <span>Saturday</span>
+                            <span>10:00 AM - 6:00 PM</span>
+                        </div>
+                        <div class="flex justify-between">
+                            <span>Sunday</span>
+                            <span>Closed</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer bg-gray-900 text-white py-8">
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div class="footer-col">
+                    <h3 class="text-xl font-bold mb-4">SoleSync</h3>
+                    <p>Your premier destination for quality footwear since 2010.</p>
+                </div>
+                <div class="footer-col">
+                    <h4 class="text-lg font-semibold mb-4">Quick Links</h4>
+                    <ul>
+                        <li class="mb-2"><a href="index.html" class="footer-link">Home</a></li>
+                        <li class="mb-2"><a href="shop.html" class="footer-link">Shop</a></li>
+                        <li class="mb-2"><a href="about.html" class="footer-link">About</a></li>
+                        <li><a href="contact.html" class="footer-link">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4 class="text-lg font-semibold mb-4">Customer Service</h4>
+                    <ul>
+                        <li class="mb-2"><a href="faq.html" class="footer-link">FAQs</a></li>
+                        <li class="mb-2"><a href="#" class="footer-link">Shipping Policy</a></li>
+                        <li class="mb-2"><a href="#" class="footer-link">Returns & Exchanges</a></li>
+                        <li><a href="#" class="footer-link">Size Guide</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4 class="text-lg font-semibold mb-4">Connect With Us</h4>
+                    <div class="social-icons flex space-x-4">
+                        <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-pinterest-p"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 mt-8 pt-6 text-center">
+                <p>&copy; 2025 SoleSync. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Product Modal -->
+    <div class="modal hidden fixed inset-0 bg-black bg-opacity-50 z-50 flex items-center justify-center p-4" id="productModal">
+        <div class="modal-content bg-white rounded-lg max-w-4xl w-full max-h-screen overflow-y-auto">
+            <div class="modal-header flex justify-between items-center p-4 border-b">
+                <h3 class="text-xl font-bold" id="modalProductTitle">Product Name</h3>
+                <button class="modal-close text-2xl">&times;</button>
+            </div>
+            <div class="modal-body p-4 md:p-6">
+                <div class="flex flex-col md:flex-row">
+                    <div class="md:w-1/2 mb-6 md:mb-0">
+                        <img src="" alt="Product Image" class="w-full rounded-lg" id="modalProductImage">
+                    </div>
+                    <div class="md:w-1/2 md:pl-6">
+                        <p class="text-gray-700 mb-4" id="modalProductDescription"></p>
+                        <div class="text-2xl font-bold mb-4" id="modalProductPrice"></div>
+                        <div class="mb-6">
+                            <label for="size" class="block mb-2">Size</label>
+                            <select id="size" class="w-full px-4 py-2 border rounded focus:outline-none focus:ring-2 focus:ring-orange-500">
+                                <option value="">Select Size</option>
+                                <option value="7">7</option>
+                                <option value="8">8</option>
+                                <option value="9">9</option>
+                                <option value="10">10</option>
+                                <option value="11">11</option>
+                                <option value="12">12</option>
+                            </select>
+                        </div>
+                        <div class="flex items-center mb-6">
+                            <button class="quantity-btn bg-gray-200 px-3 py-1 rounded-l" id="decrement">-</button>
+                            <input type="number" value="1" min="1" class="quantity-input w-12 text-center border-t border-b border-gray-300 py-1">
+                            <button class="quantity-btn bg-gray-200 px-3 py-1 rounded-r" id="increment">+</button>
+                        </div>
+                        <button class="btn-primary w-full mb-4" id="addToCart">Add to Cart</button>
+                        <button class="btn-secondary w-full">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Mobile Menu Toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Product Data
+        const products = [
+            {
+                id: 1,
+                name: "Premium Runner",
+                price: 129.99,
+                description: "Lightweight running shoes with responsive cushioning for optimal performance.",
+                image: "https://images.unsplash.com/photo-1542291026-7eec264c27ff?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80"
+            },
+             
+         {
+        id: 2,
+        name: "Classic Sneakers",
+        price: 89.99,
+        description: "Timeless design meets modern comfort.",
+        image: "https://images.unsplash.com/photo-1595950653106-6c9ebd614d3a?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+    },
+    
+    {
+        id: 3,
+        name: "Hiking Boots",
+        price: 159.99,
+        description: "Durable waterproof boots with superior traction for all your outdoor adventures.",
+        image: "https://images.unsplash.com/photo-1460353581641-37baddab0fa2?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&q=80"
+    },
+    {
+        id: 4,
+        name: "Casual Loafers",
+        price: 79.99,
+        description: "Sophisticated slip-ons perfect for both office and weekend wear.",
+        image: "https://images.unsplash.com/photo-1560769629-975ec94e6a86?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&q=80"
+    },
+    {
+        id: 5,
+        name: "Basketball High-Tops",
+        price: 119.99,
+        description: "High-performance basketball shoes with ankle support and responsive cushioning.",
+        image: "https://images.unsplash.com/photo-1556906781-9a412961c28c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&q=80"
+    },
+    
+        ];
+
+        // Display Products
+        const productsContainer = document.getElementById('products-container');
+
+        products.forEach(product => {
+            const productCard = document.createElement('div');
+            productCard.className = 'product-card bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300';
+            productCard.innerHTML = `
+                <div class="product-image h-48 overflow-hidden">
+                    <img src="${product.image}" alt="${product.name}" class="w-full h-full object-cover">
+                </div>
+                <div class="p-4">
+                    <h3 class="text-xl font-semibold mb-2">${product.name}</h3>
+                    <div class="flex justify-between items-center">
+                        <span class="text-lg font-bold">$${product.price.toFixed(2)}</span>
+                        <button class="view-details-btn text-orange-500 font-medium" data-id="${product.id}">View Details</button>
+                    </div>
+                </div>
+            `;
+            productsContainer.appendChild(productCard);
+        });
+
+        // Modal Functionality
+        const modal = document.getElementById('productModal');
+        const modalProductTitle = document.getElementById('modalProductTitle');
+        const modalProductImage = document.getElementById('modalProductImage');
+        const modalProductDescription = document.getElementById('modalProductDescription');
+        const modalProductPrice = document.getElementById('modalProductPrice');
+        const modalClose = document.querySelector('.modal-close');
+        const viewDetailsBtns = document.querySelectorAll('.view-details-btn');
+        const incrementBtn = document.getElementById('increment');
+        const decrementBtn = document.getElementById('decrement');
+        const quantityInput = document.querySelector('.quantity-input');
+        const addToCartBtn = document.getElementById('addToCart');
+        const cartCount = document.querySelector('.cart-count');
+
+        let currentProduct = null;
+        let cartItems = 0;
+
+        // View Product Details
+        viewDetailsBtns.forEach(btn => {
+            btn.addEventListener('click', (e) => {
+                const productId = parseInt(e.target.getAttribute('data-id'));
+                currentProduct = products.find(p => p.id === productId);
+                
+                modalProductTitle.textContent = currentProduct.name;
+                modalProductImage.src = currentProduct.image;
+                modalProductDescription.textContent = currentProduct.description;
+                modalProductPrice.textContent = `$${currentProduct.price.toFixed(2)}`;
+                
+                modal.classList.remove('hidden');
+                document.body.style.overflow = 'hidden';
+            });
+        });
+
+        // Close Modal
+        modalClose.addEventListener('click', () => {
+            modal.classList.add('hidden');
+            document.body.style.overflow = 'auto';
+        });
+
+        modal.addEventListener('click', (e) => {
+            if (e.target === modal) {
+                modal.classList.add('hidden');
+                document.body.style.overflow = 'auto';
+            }
+        });
+
+        // Quantity Controls
+        incrementBtn.addEventListener('click', () => {
+            quantityInput.value = parseInt(quantityInput.value) + 1;
+        });
+
+        decrementBtn.addEventListener('click', () => {
+            if (parseInt(quantityInput.value) > 1) {
+                quantityInput.value = parseInt(quantityInput.value) - 1;
+            }
+        });
+
+        // Add to Cart
+        addToCartBtn.addEventListener('click', () => {
+            if (currentProduct) {
+                const quantity = parseInt(quantityInput.value);
+                cartItems += quantity;
+                cartCount.textContent = cartItems;
+                
+                // Show confirmation (you could enhance this with a toast notification)
+                alert(`${quantity} ${currentProduct.name}(s) added to cart!`);
+                
+                // Close modal
+                modal.classList.add('hidden');
+                document.body.style.overflow = 'auto';
+            }
+        });
+
+        // Newsletter Form Submission
+        const newsletterForm = document.querySelector('.newsletter-form');
+        newsletterForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            const emailInput = newsletterForm.querySelector('input[type="email"]');
+            if (emailInput.value) {
+                alert('Thank you for subscribing to our newsletter!');
+                emailInput.value = '';
+            }
+        });
+
+        // Contact Form Submission
+        const contactForm = document.querySelector('.contact-form');
+        contactForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            alert('Thank you for your message! We will get back to you soon.');
+            contactForm.reset();
+        });
+    </script>
+</body>
+</html>

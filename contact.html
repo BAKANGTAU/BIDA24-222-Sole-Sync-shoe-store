@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - SoleSync Premium Footwear</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container mx-auto flex justify-between items-center py-4 px-6">
+            <div class="logo text-2xl font-bold">
+                <a href="index.html"><span class="text-orange-500">Sole</span><span>Sync</span></a>
+            </div>
+            <div class="nav-links hidden md:flex space-x-8">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="shop.html" class="nav-link">Shop</a>
+                <a href="about.html" class="nav-link">About</a>
+                <a href="contact.html" class="nav-link active">Contact</a>
+                <a href="faq.html" class="nav-link">FAQ</a>
+            </div>
+            <div class="nav-icons flex space-x-4">
+                <a href="#" class="nav-icon"><i class="fas fa-search"></i></a>
+                <a href="#" class="nav-icon"><i class="fas fa-user"></i></a>
+                <a href="#" class="nav-icon relative">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span class="cart-count absolute -top-2 -right-2 bg-orange-500 text-white text-xs rounded-full w-5 h-5 flex items-center justify-center">0</span>
+                </a>
+                <button class="md:hidden nav-icon" id="mobile-menu-button">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+        <!-- Mobile Menu -->
+        <div class="mobile-menu hidden md:hidden bg-white py-4 px-6 shadow-lg" id="mobile-menu">
+            <a href="index.html" class="block py-2">Home</a>
+            <a href="shop.html" class="block py-2">Shop</a>
+            <a href="about.html" class="block py-2">About</a>
+            <a href="contact.html" class="block py-2">Contact</a>
+            <a href="faq.html" class="block py-2">FAQ</a>
+        </div>
+    </nav>
+
+    <!-- Contact Header -->
+    <section class="contact-header bg-gray-100 py-12">
+        <div class="container mx-auto px-6 text-center">
+            <h1 class="text-4xl font-bold mb-4">Get In Touch</h1>
+            <p class="text-lg max-w-2xl mx-auto">We'd love to hear from you! Reach out with questions, feedback, or just to say hello.</p>
+        </div>
+    </section>
+
+    <!-- Contact Content -->
+    <section class="contact-content py-12">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col md:flex-row">
+                <div class="md:w-1/2 mb-8 md:mb-0">
+                    <h2 class="text-3xl font-bold mb-6">Send Us a Message</h2>
+                    <form class="contact-form">
+                        <div class="mb-4">
+                            <label for="name" class="block mb-2">Name</label>
+                            <input type="text" id="name" class="w-full px-4 py-2 border rounded focus:outline-none focus:ring-2 focus:ring-orange-500">
+                        </div>
+                        <div class="mb-4">
+                            <label for="email" class="block mb-2">Email</label>
+                            <input type="email" id="email" class="w-full px-4 py-2 border rounded focus:outline-none focus:ring-2 focus:ring-orange-500">
+                        </div>
+                        <div class="mb-4">
+                            <label for="subject" class="block mb-2">Subject</label>
+                            <input type="text" id="subject" class="w-full px-4 py-2 border rounded focus:outline-none focus:ring-2 focus:ring-orange-500">
+                        </div>
+                        <div class="mb-4">
+                            <label for="message" class="block mb-2">Message</label>
+                            <textarea id="message" rows="5" class="w-full px-4 py-2 border rounded focus:outline-none focus:ring-2 focus:ring-orange-500"></textarea>
+                        </div>
+                        <button type="submit" class="btn-primary">Send Message</button>
+                    </form>
+                </div>
+                <div class="md:w-1/2 md:pl-12">
+                    <h2 class="text-3xl font-bold mb-6">Contact Information</h2>
+                    <div class="contact-info mb-8">
+                        <div class="flex items-center mb-4">
+                            <i class="fas fa-map-marker-alt mr-4 text-orange-500 text-xl"></i>
+                            <div>
+                                <h4 class="font-semibold">Our Headquarters</h4>
+                                <p>123 Shoe Street, Footwear City, FC 12345</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center mb-4">
+                            <i class="fas fa-phone mr-4 text-orange-500 text-xl"></i>
+                            <div>
+                                <h4 class="font-semibold">Phone</h4>
+                                <p>(123) 456-7890</p>
+                                <p>Mon-Fri: 9am-7pm EST</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-envelope mr-4 text-orange-500 text-xl"></i>
+                            <div>
+                                <h4 class="font-semibold">Email</h4>
+                                <p>info@solesync.com</p>
+                                <p>customer.service@solesync.com</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <h3 class="text-xl font-bold mb-4">Store Locations</h3>
+                    <div class="store-locations grid grid-cols-1 gap-4">
+                        <div class="store-location bg-white p-4 rounded-lg shadow-md">
+                            <h4 class="font-semibold mb-2">Seattle Flagship</h4>
+                            <p class="text-gray-700 mb-2">200 Pine St, Seattle, WA 98101</p>
+                            <p class="text-sm">Open Mon-Sat: 10am-8pm</p>
+                        </div>
+                        <div class="store-location bg-white p-4 rounded-lg shadow-md">
+                            <h4 class="font-semibold mb-2">Portland Store</h4>
+                            <p class="text-gray-700 mb-2">350 NW 10th Ave, Portland, OR 97209</p>
+                            <p class="text-sm">Open Mon-Sat: 10am-7pm</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Map Section -->
+    <section class="map-section bg-gray-100 py-12">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center mb

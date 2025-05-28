@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQs - SoleSync Premium Footwear</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container mx-auto flex justify-between items-center py-4 px-6">
+            <div class="logo text-2xl font-bold">
+                <a href="index.html"><span class="text-orange-500">Sole</span><span>Sync</span></a>
+            </div>
+            <div class="nav-links hidden md:flex space-x-8">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="shop.html" class="nav-link">Shop</a>
+                <a href="about.html" class="nav-link">About</a>
+                <a href="contact.html" class="nav-link">Contact</a>
+                <a href="faq.html" class="nav-link active">FAQ</a>
+            </div>
+            <div class="nav-icons flex space-x-4">
+                <a href="#" class="nav-icon"><i class="fas fa-search"></i></a>
+                <a href="#" class="nav-icon"><i class="fas fa-user"></i></a>
+                <a href="#" class="nav-icon relative">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span class="cart-count absolute -top-2 -right-2 bg-orange-500 text-white text-xs rounded-full w-5 h-5 flex items-center justify-center">0</span>
+                </a>
+                <button class="md:hidden nav-icon" id="mobile-menu-button">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+        <!-- Mobile Menu -->
+        <div class="mobile-menu hidden md:hidden bg-white py-4 px-6 shadow-lg" id="mobile-menu">
+            <a href="index.html" class="block py-2">Home</a>
+            <a href="shop.html" class="block py-2">Shop</a>
+            <a href="about.html" class="block py-2">About</a>
+            <a href="contact.html" class="block py-2">Contact</a>
+            <a href="faq.html" class="block py-2">FAQ</a>
+        </div>
+    </nav>
+
+    <!-- FAQ Header -->
+    <section class="faq-header bg-gray-100 py-12">
+        <div class="container mx-auto px-6 text-center">
+            <h1 class="text-4xl font-bold mb-4">Frequently Asked Questions</h1>
+            <p class="text-lg max-w-2xl mx-auto">Find answers to common questions about our products, shipping, returns, and more.</p>
+        </div>
+    </section>
+
+    <!-- FAQ Content -->
+    <section class="faq-content py-12">
+        <div class="container mx-auto px-6 max-w-4xl">
+            <!-- Search Bar -->
+            <div class="search-bar mb-12">
+                <div class="relative">
+                    <input type="text" placeholder="Search FAQs..." class="w-full px-4 py-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500">
+                    <button class="absolute right-3 top-3 text-gray-500">
+                        <i class="fas fa-search"></i>
+                    </button>
+                </div>
+            </div>
+            
+            <!-- FAQ Categories -->
+            <div class="flex flex-wrap gap-4 mb-8">
+                <button class="faq-category-btn bg-orange-500 text-white px-4 py-2 rounded-full">All Questions</button>
+                <button class="faq-category-btn bg-gray-200 px-4 py-2 rounded-full hover:bg-orange-500 hover:text-white">Shipping</button>
+                <button class="faq-category-btn bg-gray-200 px-4 py-2 rounded-full hover:bg-orange-500 hover:text-white">Returns</button>
+                <button class="faq-category-btn bg-gray-200 px-4 py-2 rounded-full hover:bg-orange-500 hover:text-white">Products</button>
+                <button class="faq-category-btn bg-gray-200 px-4 py-2 rounded-full hover:bg-orange-500 hover:text-white">Payments</button>
+                <button class="faq-category-btn bg-gray-200 px-4 py-2 rounded-full hover:bg-orange-500 hover:text-white">Account</button>
+            </div>
+            
+            <!-- FAQ Accordion -->
+            <div class="faq-accordion space-y-4">
+                <!-- Shipping Questions -->
+                <div class="faq-item border-b pb-4">
+                    <button class="faq-question flex justify-between items-center w-full text-left font-semibold text-lg py-3">
+                        <span>How long does shipping take?</span>
+                        <i class="fas fa-chevron-down transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-answer hidden mt-2 text-gray-700">
+                        <p>Shipping times vary depending on your location and the shipping method selected at checkout. Standard shipping typically takes 3-5 business days within the continental US, while expedited options are available for faster delivery. International shipping may take 7-14 business days. You'll receive a tracking number once your order ships so you can follow its progress.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item border-b pb-4">
+                    <button class="faq-question flex justify-between items-center w-full text-left font-semibold text-lg py-3">
+                        <span>Do you offer international shipping?</span>
+                        <i class="fas fa-chevron-down transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-answer hidden mt-2 text-gray-700">
+                        <p>Yes, we ship to most countries worldwide. International shipping rates and delivery times vary by destination. Please note that customers are responsible for any customs fees, import duties, or taxes that may be charged by their country's customs office. These fees are not included in the shipping cost or product price.</p>
+                    </div>
+                </div>
+                
+                <!-- Returns Questions -->
+                <div class="faq-item border-b pb-4">
+                    <button class="faq-question flex justify-between items-center w-full text-left font-semibold text-lg py-3">
+                        <span>What is your return policy?</span>
+                        <i class="fas fa-chevron-down transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-answer hidden mt-2 text-gray-700">
+                        <p>We offer a 30-day return policy for unworn items in their original condition with all tags attached. To initiate a return, please visit our Returns Center in your account or contact our customer service team. Return shipping is free for US customers. Refunds are processed within 3-5 business days after we receive your return.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item border-b pb-4">
+                    <button class="faq-question flex justify-between items-center w-full text-left font-semibold text-lg py-3">
+                        <span>Can I exchange an item for a different size?</span>
+                        <i class="fas fa-chevron-down transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-answer hidden mt-2 text-gray-700">
+                        <p>Absolutely! We're happy to help with size exchanges. If the item you'd like is in stock, we can process an exchange for you. Simply start a return for the original item and place a new order for the correct size. For faster service, we recommend placing a new order right away and returning the original item separately.</p>
+                    </div>
+                </div>
+                
+                <!-- Product Questions -->
+                <div class="faq-item border-b pb-4">
+                    <button class="faq-question flex justify-between items-center w-full text-left font-semibold text-lg py-3">
+                        <span>How do I know what size to order?</span>
+                        <i class="fas fa-chevron-down transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-answer hidden mt-2 text-gray-700">
+                        <p>We provide detailed sizing information for each product on its page, including measurements and fit recommendations. If you're unsure, we recommend measuring your foot and comparing it to our size chart. Many of our customers find that our shoes fit true to size, but some styles may run slightly large or small - this will be noted in the product description.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item border-b pb-4">
+                    <button class="faq-question flex justify-between items-center w-full text-left font-semibold text-lg py-3">
+                        <span>Are your shoes waterproof?</span>
+                        <i class="fas fa-chevron-down transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-answer hidden mt-2 text-gray-700">
+                        <p>Some of our shoes are waterproof or water-resistant, while others are not. This information is always specified in the product details. Our hiking boots and many winter styles feature waterproof membranes, while most casual shoes and sneakers are not designed to be waterproof. If you need help finding waterproof options, our customer service team can help.</p>
+                    </div>
+                </div>
+                
+                <!-- Payment Questions -->
+                <div class="faq-item border-b pb-4">
+                    <button class="faq-question flex justify-between items-center w-full text-left font-semibold text-lg py-3">
+                        <span>What payment methods do you accept?</span>
+                        <i class="fas fa-chevron-down transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-answer hidden mt-2 text-gray-700">
+                        <p>We accept all major credit cards (Visa, Mastercard, American Express, Discover), PayPal, Apple Pay, and Google Pay. We also offer financing options through Afterpay and Klarna for qualified customers. All transactions are securely processed with industry-standard encryption.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item border-b pb-4">
+                    <button class="faq-question flex justify-between items-center w-full text-left font-semibold text-lg py-3">
+                        <span>Is it safe to enter my credit card information?</span>
+                        <i class="fas fa-chevron-down transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-answer hidden mt-2 text-gray-700">
+                        <p>Yes, your security is our top priority. We use SSL encryption to protect all sensitive information during transmission. We don't store your full credit card details on our servers - all payment information is processed through PCI-compliant payment processors. You can also choose to checkout through PayPal for an additional layer of security.</p>
+                    </div>
+                </div>
+                
+                <!-- Account Questions -->
+                <div class="faq-item border-b pb-4">
+                    <button class="faq-question flex justify-between items-center w-full text-left font-semibold text-lg py-3">
+                        <span>How do I reset my password?</span>
+                        <i class="fas fa-chevron-down transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-answer hidden mt-2 text-gray-700">
+                        <p>To reset your password, click on "Forgot Password" on the login page and enter the email address associated with your account. You'll receive an email with a link to create a new password. If you don't see the email, please check your spam folder. For further assistance, contact our customer service team.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item border-b pb-4">
+                    <button class="faq-question flex justify-between items-center w-full text-left font-semibold text-lg py-3">
+                        <span>How do I track my order?</span>
+                        <i class="fas fa-chevron-down transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-answer hidden mt-2 text-gray-700">
+                        <p>Once your order ships, you'll receive a shipping confirmation email with your tracking number. You can click the tracking link in that email or log into your account to view your order status. If you checked out as a guest, you can track your order using the link in your shipping confirmation email.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Still Have Questions -->
+            <div class="still-have-questions bg-orange-50 p-6 rounded-lg mt-12 text-center">
+                <h3 class="text-xl font-bold mb-4">Still have questions?</h3>
+                <p class="mb-4">We're here to help! Contact our customer service team for personalized assistance.</p>
+                <a href="contact.html" class="btn-primary inline-block">Contact Us</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter -->
+    <section class="newsletter py-12 bg-orange-500 text-white">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="text-3xl font-bold mb-4">Stay Updated</h2>
+            <p class="mb-8 max-w-2xl mx-auto">Subscribe to our newsletter for exclusive offers, new arrivals, and style tips.</p>
+            <form class="newsletter-form max-w-md mx-auto flex">
+                <input type="email" placeholder="Your email address" class="flex-grow px-4 py-2 rounded-l focus:outline-none text-gray-800">
+                <button type="submit" class="btn-newsletter">Subscribe</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer bg-gray-900 text-white py-8">
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div class="footer-col">
+                    <h3 class="text-xl font-bold mb-4">SoleSync</h3>
+                    <p>Your premier destination for quality footwear since 2010.</p>
+                </div>
+                <div class="footer-col">
+                    <h4 class="text-lg font-semibold mb-4">Quick Links</h4>
+                    <ul>
+                        <li class="mb-2"><a href="index.html" class="footer-link">Home</a></li>
+                        <li class="mb-2"><a href="shop.html" class="footer-link">Shop</a></li>
+                        <li class="mb-2"><a href="about.html" class="footer-link">About</a></li>
+                        <li><a href="contact.html" class="footer-link">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4 class="text-lg font-semibold mb-4">Customer Service</h4>
+                    <ul>
+                        <li class="mb-2"><a href="faq.html" class="footer-link">FAQs</a></li>
+                        <li class="mb-2"><a href="#" class="footer-link">Shipping Policy</a></li>
+                        <li class="mb-2"><a href="#" class="footer-link">Returns & Exchanges</a></li>
+                        <li><a href="#" class="footer-link">Size Guide</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4 class="text-lg font-semibold mb-4">Connect With Us</h4>
+                    <div class="social-icons flex space-x-4">
+                        <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-pinterest-p"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 mt-8 pt-6 text-center">
+                <p>&copy; 2025 SoleSync. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // FAQ Accordion Functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const faqQuestions = document.querySelectorAll('.faq-question');
+            
+            faqQuestions.forEach(question => {
+                question.addEventListener('click', () => {
+                    const answer = question.nextElementSibling;
+                    const icon = question.querySelector('i');
+                    
+                    // Toggle answer visibility
+                    answer.classList.toggle('hidden');
+                    
+                    // Rotate icon
+                    icon.classList.toggle('transform');
+                    icon.classList.toggle('rotate-180');
+                    
+                    // Close other open answers
+                    faqQuestions.forEach(otherQuestion => {
+                        if (otherQuestion !== question) {
+                            otherQuestion.nextElementSibling.classList.add('hidden');
+                            otherQuestion.querySelector('i').classList.remove('transform', 'rotate-180');
+                        }
+                    });
+                });
+            });
+            
+            // FAQ Category Filtering
+            const categoryButtons = document.querySelectorAll('.faq-category-btn');
+            
+            categoryButtons.forEach(button => {
+                button.addEventListener('click', () => {
+                    // Remove active class from all buttons
+                    categoryButtons.forEach(btn => {
+                        btn.classList.remove('bg-orange-500', 'text-white');
+                        btn.classList.add('bg-gray-200');
+                    });
+                    
+                    // Add active class to clicked button
+                    button.classList.add('bg-orange-500', 'text-white');
+                    button.classList.remove('bg-gray-200');
+                    
+                    // Here you would implement filtering logic based on category
+                    // This would require adding data attributes to FAQ items
+                });
+            });
+            
+            // Mobile Menu Toggle
+            const mobileMenuButton = document.getElementById('mobile-menu-button');
+            const mobileMenu = document.getElementById('mobile-menu');
+            
+            mobileMenuButton.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+            });
+        });
+    </script>
+</body>
+</html>

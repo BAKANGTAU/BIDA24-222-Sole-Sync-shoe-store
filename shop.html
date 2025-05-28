@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop - SoleSync Premium Footwear</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container mx-auto flex justify-between items-center py-4 px-6">
+            <div class="logo text-2xl font-bold">
+                <a href="index.html"><span class="text-orange-500">Sole</span><span>Sync</span></a>
+            </div>
+            <div class="nav-links hidden md:flex space-x-8">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="shop.html" class="nav-link">Shop</a>
+                <a href="about.html" class="nav-link">About</a>
+                <a href="contact.html" class="nav-link">Contact</a>
+                <a href="faq.html" class="nav-link">FAQ</a>
+            </div>
+            <div class="nav-icons flex space-x-4">
+                <a href="#" class="nav-icon"><i class="fas fa-search"></i></a>
+                <a href="#" class="nav-icon"><i class="fas fa-user"></i></a>
+                <a href="#" class="nav-icon relative">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span class="cart-count absolute -top-2 -right-2 bg-orange-500 text-white text-xs rounded-full w-5 h-5 flex items-center justify-center">0</span>
+                </a>
+                <button class="md:hidden nav-icon" id="mobile-menu-button">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+        <!-- Mobile Menu -->
+        <div class="mobile-menu hidden md:hidden bg-white py-4 px-6 shadow-lg" id="mobile-menu">
+            <a href="index.html" class="block py-2">Home</a>
+            <a href="shop.html" class="block py-2">Shop</a>
+            <a href="about.html" class="block py-2">About</a>
+            <a href="contact.html" class="block py-2">Contact</a>
+            <a href="faq.html" class="block py-2">FAQ</a>
+        </div>
+    </nav>
+
+    <!-- Shop Header -->
+    <section class="shop-header bg-gray-100 py-12">
+        <div class="container mx-auto px-6 text-center">
+            <h1 class="text-4xl font-bold mb-4">Our Collection</h1>
+            <p class="text-lg max-w-2xl mx-auto">Discover the perfect pair for every occasion in our premium footwear collection.</p>
+        </div>
+    </section>
+
+    <!-- Shop Content -->
+    <section class="shop-content py-12">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col md:flex-row">
+                <!-- Sidebar Filters -->
+                <div class="sidebar md:w-1/4 pr-0 md:pr-8 mb-8 md:mb-0">
+                    <div class="bg-white p-6 rounded-lg shadow-md">
+                        <h3 class="text-xl font-bold mb-4">Filter By</h3>
+                        
+                        <!-- Categories -->
+                        <div class="mb-6">
+                            <h4 class="font-semibold mb-3">Categories</h4>
+                            <ul>
+                                <li class="mb-2"><a href="#" class="text-gray-700 hover:text-orange-500">All Shoes</a></li>
+                                <li class="mb-2"><a href="#" class="text-gray-700 hover:text-orange-500">Sneakers</a></li>
+                                <li class="mb-2"><a href="#" class="text-gray-700 hover:text-orange-500">Running</a></li>
+                                <li class="mb-2"><a href="#" class="text-gray-700 hover:text-orange-500">Casual</a></li>
+                                <li class="mb-2"><a href="#" class="text-gray-700 hover:text-orange-500">Boots</a></li>
+                                <li><a href="#" class="text-gray-700 hover:text-orange-500">Sandals</a></li>
+                            </ul>
+                        </div>
+                        
+                        <!-- Price Range -->
+                        <div class="mb-6">
+                            <h4 class="font-semibold mb-3">Price Range</h4>
+                            <input type="range" min="0" max="300" value="150" class="w-full mb-2">
+                            <div class="flex justify-between text-sm">
+                                <span>$0</span>
+                                <span>$300</span>
+                            </div>
+                        </div>
+                        
+                        <!-- Size -->
+                        <div class="mb-6">
+                            <h4 class="font-semibold mb-3">Size</h4>
+                            <div class="grid grid-cols-3 gap-2">
+                                <button class="size-btn border rounded py-1 hover:bg-orange-500 hover:text-white">7</button>
+                                <button class="size-btn border rounded py-1 hover:bg-orange-500 hover:text-white">8</button>
+                                <button class="size-btn border rounded py-1 hover:bg-orange-500 hover:text-white">9</button>
+                                <button class="size-btn border rounded py-1 hover:bg-orange-500 hover:text-white">10</button>
+                                <button class="size-btn border rounded py-1 hover:bg-orange-500 hover:text-white">11</button>
+                                <button class="size-btn border rounded py-1 hover:bg-orange-500 hover:text-white">12</button>
+                            </div>
+                        </div>
+                        
+                        <!-- Color -->
+                        <div>
+                            <h4 class="font-semibold mb-3">Color</h4>
+                            <div class="flex space-x-3">
+                                <button class="w-6 h-6 rounded-full bg-black border border-gray-300"></button>
+                                <button class="w-6 h-6 rounded-full bg-white border border-gray-300"></button>
+                                <button class="w-6 h-6 rounded-full bg-red-500"></button>
+                                <button class="w-6 h-6 rounded-full bg-blue-500"></button>
+                                <button class="w-6 h-6 rounded-full bg-gray-500"></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Product Grid -->
+                <div class="products-grid md:w-3/4">
+                    <div class="flex justify-between items-center mb-6">
+                        <div class="flex items-center">
+                            <span class="mr-2">Sort by:</span>
+                            <select class="border rounded px-3 py-1 focus:outline-none focus:ring-2 focus:ring-orange-500">
+                                <option>Featured</option>
+                                <option>Price: Low to High</option>
+                                <option>Price: High to Low</option>
+                                <option>Newest Arrivals</option>
+                                <option>Best Sellers</option>
+                            </select>
+                        </div>
+                        <div>
+                            <span class="text-gray-600">Showing 1-12 of 36 products</span>
+                        </div>
+                    </div>
+                    
+                    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8" id="products-container">
+                        <!-- Product cards will be inserted here by JavaScript -->
+                    </div>
+                    
+                    <!-- Pagination -->
+                    <div class="mt-12 flex justify-center">
+                        <nav class="flex items-center space-x-2">
+                            <button class="px-3 py-1 rounded border hover:bg-orange-500 hover:text-white">&laquo;</button>
+                            <button class="px-3 py-1 rounded border bg-orange-500 text-white">1</button>
+                            <button class="px-3 py-1 rounded border hover:bg-orange-500 hover:text-white">2</button>
+                            <button class="px-3 py-1 rounded border hover:bg-orange-500 hover:text-white">3</button>
+                            <button class="px-3 py-1 rounded border hover:bg-orange-500 hover:text-white">&raquo;</button>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter -->
+    <section class="newsletter py-12 bg-orange-500 text-white">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="text-3xl font-bold mb-4">Stay Updated</h2>
+            <p class="mb-8 max-w-2xl mx-auto">Subscribe to our newsletter for exclusive offers, new arrivals, and style tips.</p>
+            <form class="newsletter-form max-w-md mx-auto flex">
+                <input type="email" placeholder="Your email address" class="flex-grow px-4 py-2 rounded-l focus:outline-none text-gray-800">
+                <button type="submit" class="btn-newsletter">Subscribe</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer bg-gray-900 text-white py-8">
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div class="footer-col">
+                    <h3 class="text-xl font-bold mb-4">SoleSync</h3>
+                    <p>Your premier destination for quality footwear since 2010.</p>
+                </div>
+                <div class="footer-col">
+                    <h4 class="text-lg font-semibold mb-4">Quick Links</h4>
+                    <ul>
+                        <li class="mb-2"><a href="index.html" class="footer-link">Home</a></li>
+                        <li class="mb-2"><a href="shop.html" class="footer-link">Shop</a></li>
+                        <li class="mb-2"><a href="about.html" class="footer-link">About</a></li>
+                        <li><a href="contact.html" class="footer-link">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4 class="text-lg font-semibold mb-4">Customer Service</h4>
+                    <ul>
+                        <li class="mb-2"><a href="faq.html" class="footer-link">FAQs</a></li>
+                        <li class="mb-2"><a href="#" class="footer-link">Shipping Policy</a></li>
+                        <li class="mb-2"><a href="#" class="footer-link">Returns & Exchanges</a></li>
+                        <li><a href="#" class="footer-link">Size Guide</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4 class="text-lg font-semibold mb-4">Connect With Us</h4>
+                    <div class="social-icons flex space-x-4">
+                        <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-pinterest-p"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 mt-8 pt-6 text-center">
+                <p>&copy; 2025 SoleSync. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Product Modal -->
+    <div class="modal hidden fixed inset-0 bg-black bg-opacity-50 z-50 flex items-center justify-center p-4" id="productModal">
+        <div class="modal-content bg-white rounded-lg max-w-4xl w-full max-h-screen overflow-y-auto">
+            <div class="modal-header flex justify-between items-center p-4 border-b">
+                <h3 class="text-xl font-bold" id="modalProductTitle">Product Name</h3>
+                <button class="modal-close text-2xl">&times;</button>
+            </div>
+            <div class="modal-body p-4 md:p-6">
+                <div class="flex flex-col md:flex-row">
+                    <div class="md:w-1/2 mb-6 md:mb-0">
+                        <img src="" alt="Product Image" class="w-full rounded-lg" id="modalProductImage">
+                    </div>
+                    <div class="md:w-1/2 md:pl-6">
+                        <p class="text-gray-700 mb-4" id="modalProductDescription"></p>
+                        <div class="text-2xl font-bold mb-4" id="modalProductPrice"></div>
+                        <div class="mb-6">
+                            <label for="size" class="block mb-2">Size</label>
+                            <select id="size" class="w-full px-4 py-2 border rounded focus:outline-none focus:ring-2 focus:ring-orange-500">
+                                <option value="">Select Size</option>
+                                <option value="7">7</option>
+                                <option value="8">8</option>
+                                <option value="9">9</option>
+                                <option value="10">10</option>
+                                <option value="11">11</option>
+                                <option value="12">12</option>
+                            </select>
+                        </div>
+                        <div class="flex items-center mb-6">
+                            <button class="quantity-btn bg-gray-200 px-3 py-1 rounded-l" id="decrement">-</button>
+                            <input type="number" value="1" min="1" class="quantity-input w-12 text-center border-t border-b border-gray-300 py-1">
+                            <button class="quantity-btn bg-gray-200 px-3 py-1 rounded-r" id="increment">+</button>
+                        </div>
+                        <button class="btn-primary w-full mb-4" id="addToCart">Add to Cart</button>
+                        <button class="btn-secondary w-full">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
